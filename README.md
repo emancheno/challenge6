@@ -20,7 +20,7 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
 
 ### The challenge
 
-The challenge was to build out this card component and get it looking as close to the design as possible, use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+The challenge was to build out this card component and get it looking as close to the design as possible, using only HTML5 & CSS to complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
 Users should be able to:
 
