@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+:root{
+    --Verydarkblue : hsl(233, 47%, 7%);/*(main background)*/
+    --Darkdesaturatedblue : hsl(244, 38%, 16%);/*(card background)*/
+    --Softviolet : hsl(277, 64%, 61%); /*(accent)*/
+    --White: hsl(0, 0%, 100%); /*(main heading, stats*/
+    --Slightlytransparentwhite: hsla(0, 0%, 100%, 0.75);/*(main paragraph)*/
+    --Slightlytransparentwhite : hsla(0, 0%, 100%, 0.6); /*(stat headings)*/
+}
+*{
+    padding: 0;
+    margin: 0;}
+body{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Verydarkblue);
+}
+.container{
+    border-radius: 8px;
+    border: 1px black solid;
+    width: 325px;
+    height: 780px;
+    margin: 87px auto auto auto;
+    background-color: var(--Darkdesaturatedblue);
+    overflow: hidden;  
+    display: flex;
+    flex-direction: column;
+}
+.section1{
+    height: auto;
+    width: auto;
+}
+.section2{
+    height: auto;
+}
+.photo{
+    height: 239px;
+    width: auto;
+    background: linear-gradient(to right,rgba(77, 14, 96, 0.5), rgba(77, 14, 96, 0.5)), url(images/image-header-mobile.jpg);
+    background-size: contain;
+    animation: updown 800ms cubic-bezier(0,1.52,.58,.7);
+    animation-fill-mode: forwards;
+}
+.info, h1{
+    align-self: center;
+    text-align: center;
+    color: var(--White);
+    font-family: 'inter', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    width: 275px;
+    
+}
+h1{
+    margin-top: 35px;
+    animation: leftright 800ms;
+}
+.insights{
+    color: var(--Softviolet);
+    text-transform: lowercase;
+}
+p{
+    margin-top: 20px;
+    color: var(--Slightlytransparentwhite);
+    font-family: 'inter', sans-serif;
+    text-align: center;
+    line-height: 26px;
+    font-size: 15px;
+    width: 260px;
+    font-weight: 400;
+    align-self: center;
+    animation: rightleft 800ms;
+}
+div.stats-container{
+    text-align: center;
+    height: 207px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: downup 800ms cubic-bezier(0,1.52,.58,.7);
+    
+}
+.stats-container{
+    margin-top: 40px;
+}
+.stats{
+    line-height: 23px;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--White);
+    height: 45px;
+}
+.stats span{
+    color: var(--Slightlytransparentwhite);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.attribution { font-size: 11px; text-align: center; color: antiquewhite; padding-top: 15px; }
+.attribution a { color: hsl(228, 5%, 79%); }
+/*--------------1440px--------------------*/
+@media only screen and (min-width:1440px){
+    .container{
+        margin-top: 175px;
+        width: 1108px;
+        height: 440px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .photo{
+        width: 540px;
+        height: 440px;
+        background: linear-gradient(to right,rgba(77, 14, 96, 0.5), rgba(77, 14, 96, 0.5)), url(images/image-header-desktop.jpg);
+        background-size: cover
+    }
+    .info{
+        width: 568px;
+        height: 440px;
+    }
+    h1, p{
+        text-align: left;
+    }
+    .stats{
+        width: 85px;
+    }
+    div.stats-container{
+        display: flex;
+        flex-direction: row;
+        width: 353px;
+    }
+   h1, p, div.stats-container{
+    margin-left: 72px;
+   } 
+   h1{
+    margin-top: 80px;
+    width: 380px;
+   }
+   p{
+    margin-top: 30px;
+    width: 355px;
+   }
+   div.stats-container{
+    height: 45px;
+    margin-top: 80px;
+   }
+}
+/*------------Animations--------------*/
+@keyframes updown{
+    0%{transform: translateY(-500px)};
+    100%{transform: translateY(0)}
+}
+@keyframes downup{
+    0%{transform: translateY(500px)};
+    100%{transform: translateY(0)}
+}
+@keyframes leftright{
+    0%{transform: translateX(500px)};
+    100%{transform: translateX(0)}
+}
+@keyframes rightleft{
+    0%{transform: translateX(-500px)};
+    100%{transform: translateX(0)}
+}
